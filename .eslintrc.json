@@ -1,0 +1,32 @@
+{
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "parser": "@typescript-eslint/parser",
+    "env": {
+        "browser": true,
+        "jest": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:promise/recommended",
+        "plugin:tailwindcss/recommended",
+        "prettier",         
+        "next"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "jsx-a11y",
+        "prettier",
+        "import"
+    ]
+  }
