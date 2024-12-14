@@ -1,11 +1,20 @@
 'use client';
 
-import Image from 'next/image';
+import { OnePieceCard } from '@/types/types';
 import React from 'react';
 
-export default function OnePiece() {
-    return (
-        <div className="flex size-full bg-red-500">
+interface Props {
+  onePieceCards: OnePieceCard[];
+}
+
+export default function OnePiece({ onePieceCards }: Props) {
+  return (
+    <div className="size-full bg-red-500">
+      {onePieceCards.map((card) => (
+        <div key={card.id}>
+          {card.set.name}
         </div>
-    );
+      ))}
+    </div>
+  );
 }

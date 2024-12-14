@@ -19,7 +19,7 @@ export default function RootLayout({
             </head>
             <body className="m-0 size-full">
                 <Header />
-                <div>{children}</div>
+                <div className='size-full'>{children}</div>
             </body>
         </html>
     );

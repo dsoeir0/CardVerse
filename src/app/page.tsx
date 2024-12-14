@@ -1,9 +1,11 @@
+import { getOnePiece } from "@/api/api";
 import OnePiece from "@/components/one-piece";
 
-export default function Home() {
+export default async function Home() {
+    const onePieceCards = await getOnePiece()
     return (
         <>
-            <OnePiece />
+            <OnePiece onePieceCards={onePieceCards} />
         </>
     );
 }

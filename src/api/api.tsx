@@ -1,23 +1,23 @@
+// api/api.ts
 import { OnePieceCard } from '@/types/types';
 
-const API_BASE_URL = 'https://apitcg.com/api/';
+export const getOnePiece = async (): Promise<OnePieceCard[]> => {
+  const API_BASE_URL = 'https://apitcg.com/api/';
+  const url = `${API_BASE_URL}/one-piece/cards`;
 
-export const getOnePiece = async (endpoint: string): Promise<OnePieceCard> => {
-    const url = `${API_BASE_URL}/one-piece/cards`;
-    try {
-        const response = await fetch(url);
+  const res = await fetch(url, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    cache: 'no-cache',
+  });
 
-        if (!response.ok) {
-            throw new Error(
-                `Error fetching ${endpoint}: ${response.statusText}`
-            );
-        }
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
 
-        const data = await response.json();
+  const result = await res.json();
 
-        return data;
-    } catch (error) {
-        console.error('Fetch error:', error);
-        throw error;
-    }
+  return result.data || [];
 };
