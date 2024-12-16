@@ -1,11 +1,11 @@
-import { getOnePiece } from "@/api/api";
+import { getOnePieceSets } from "@/api/api";
 import OnePiece from "@/components/one-piece";
 
 export default async function Home() {
-    const onePieceCards = await getOnePiece()
+    const onePieceSets = await getOnePieceSets()
     return (
         <>
-            <OnePiece onePieceCards={onePieceCards} />
+            <OnePiece onePieceSets={onePieceSets} />
         </>
     );
 }

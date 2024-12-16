@@ -17,7 +17,7 @@ export default function RootLayout({
             <head>
             <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet"></link>
             </head>
-            <body className="m-0 size-full">
+            <body className="m-0 size-full bg-red-500">
                 <Header />
                 <div className='size-full'>{children}</div>
             </body>

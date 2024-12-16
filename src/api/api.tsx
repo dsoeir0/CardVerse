@@ -1,11 +1,8 @@
-// api/api.ts
-import { OnePieceCard } from '@/types/types';
+import { OnePieceSet } from '@/types/types';
 
-export const getOnePiece = async (): Promise<OnePieceCard[]> => {
-  const API_BASE_URL = 'https://apitcg.com/api/';
-  const url = `${API_BASE_URL}/one-piece/cards`;
+export const getOnePieceSets = async (): Promise<OnePieceSet[]> => {
 
-  const res = await fetch(url, {
+  const res = await fetch(`https://optcgapi.com/api/allSets/`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -19,5 +16,5 @@ export const getOnePiece = async (): Promise<OnePieceCard[]> => {
 
   const result = await res.json();
 
-  return result.data || [];
+  return result;
 };
