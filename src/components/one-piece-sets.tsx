@@ -8,13 +8,13 @@ interface Props {
     onePieceSets: OnePieceSet[];
 }
 
-export default function OnePiece({ onePieceSets }: Props) {
+export default function OnePieceSets({ onePieceSets }: Props) {
   return (
     <div className="size-ful">
       {onePieceSets.map((onePiece) => (
         <div key={onePiece.set_id}>
             <div>
-                <Image src={`/images/sets/${onePiece.set_id}.png`} alt={`${onePiece.set_name}`} width={200} height={100} />
+                <Image src={`/images/one-piece/sets/${onePiece.set_id}.png`} alt={`${onePiece.set_name}`} width={200} height={100} />
             </div>
           {onePiece.set_name}
         </div>
