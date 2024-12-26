@@ -10,7 +10,7 @@ interface Props {
 
 export default function OnePieceSets({ onePieceSets }: Props) {
   return (
-    <div className="size-ful">
+    <div className="size-full">
       {onePieceSets.map((onePiece) => (
         <div key={onePiece.set_id}>
             <div>
