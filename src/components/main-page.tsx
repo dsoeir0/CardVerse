@@ -17,6 +17,11 @@ export default function MainPage() {
             <Image src={`/images/pokemon/logo.png`} alt={`logo`} width={300} height={168} />
             </Link>
         </div>
+        <div>
+            <Link href={'/yu-gi-oh'}>
+            <Image src={`/images/yu-gi-oh/logo.png`} alt={`logo`} width={300} height={168} />
+            </Link>
+        </div>
     </div>
   );
 }
